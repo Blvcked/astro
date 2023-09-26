@@ -51,5 +51,5 @@ barba.hooks.afterLeave(() => {
 barba.hooks.after(() => {
 	updateEffects();
 	updateTriggers();
-	scrollTo(0);
+	scrollTo(0, false);
 });
