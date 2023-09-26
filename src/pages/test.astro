@@ -1,57 +1,21 @@
 ---
-import "../scss/app.scss";
-
-import Loader from "../components/Loader.astro";
-import Smoother from "../components/Smoother.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Test";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link
-			rel="icon"
-			type="image/svg+xml"
-			href="/favicon.svg"
-		/>
-		<meta
-			name="viewport"
-			content="width=device-width"
-		/>
-		<meta
-			name="generator"
-			content={Astro.generator}
-		/>
-		<title>Astro</title>
-	</head>
-	<body data-barba="wrapper">
-		<Loader />
-		<Header />
-		<Smoother>
-			<main
-				id="appMain"
-				data-barba="container"
-				data-barba-namespace="Testing"
-			>
-				<section>
-					<h1>TEST</h1>
-					<h1>TEST</h1>
-					<h1>TEST</h1>
-					<h1>TEST</h1>
-					<h1>TEST</h1>
-				</section>
-				<section>
-					<h1>TEST</h1>
-					<h1>TEST</h1>
-					<h1>TEST</h1>
-					<h1>TEST</h1>
-					<h1>TEST</h1>
-				</section>
-			</main>
-			<Footer />
-		</Smoother>
-
-		<script src="../js/app.js"></script>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<section>
+		<h1>TEST</h1>
+		<h1>TEST</h1>
+		<h1>TEST</h1>
+		<h1>TEST</h1>
+		<h1>TEST</h1>
+	</section>
+	<section>
+		<h1>TEST</h1>
+		<h1>TEST</h1>
+		<h1>TEST</h1>
+		<h1>TEST</h1>
+		<h1>TEST</h1>
+	</section>
+</BaseLayout>
