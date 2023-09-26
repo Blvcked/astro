@@ -1,7 +1,5 @@
-<!-- Component TEMPLATE -->
 <div id="siteLoader"></div>
 
-<!-- Component STYLES -->
 <style is:global>
 	#siteLoader {
 		position: fixed;
@@ -19,13 +17,7 @@
 	}
 </style>
 
-<!-- Component SCRIPTS -->
 <script>
-	/**
-	 * Execute in windowLoad() so the loader
-	 * goes away as soon as the page is loaded.
-	 * Remove it from the DOM after X seconds, just in case.
-	 */
 	function exitLoader() {
 		const loaderElement = document.querySelector("#siteLoader");
 
