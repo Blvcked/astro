@@ -44,6 +44,10 @@ const canonicalURL = Astro.url;
 			property="og:description"
 			content={pageDescription}
 		/>
+		<meta
+			property="og:url"
+			content={canonicalURL}
+		/>
 	</head>
 	<body data-barba="wrapper">
 		<Loader />
