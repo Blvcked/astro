@@ -7,21 +7,43 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 const { pageTitle } = Astro.props;
+const { pageDescription } = Astro.props;
+const canonicalURL = Astro.url;
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width"
+		/>
 		<link
 			rel="icon"
 			type="image/svg+xml"
 			href="/favicon.svg"
 		/>
-		<meta
-			name="viewport"
-			content="width=device-width"
-		/>
+
+		{/* SEO */}
 		<title>{pageTitle}</title>
+		<meta
+			name="description"
+			content={pageDescription}
+		/>
+		<link
+			rel="canonical"
+			href={canonicalURL}
+		/>
+
+		{/* Open Graph */}
+		<meta
+			property="og:title"
+			content={pageTitle}
+		/>
+		<meta
+			property="og:description"
+			content={pageDescription}
+		/>
 	</head>
 	<body data-barba="wrapper">
 		<Loader />

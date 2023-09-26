@@ -3,9 +3,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 
 const pageTitle = "Home Page";
+const pageDescription =
+	"Pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo.";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout
+	pageTitle={pageTitle}
+	pageDescription={pageDescription}
+>
 	<Hero />
 	<Hero />
 	<Hero />
