@@ -1,9 +1,9 @@
 {/* Component TEMPLATE */}
-<div id="siteLoader"></div>
+<div id="appLoader"></div>
 
 {/* Component STYLES */}
 <style is:global>
-	#siteLoader {
+	#appLoader {
 		position: fixed;
 		z-index: var(--layer--above-all);
 		height: 100%;
@@ -13,7 +13,7 @@
 		transition: opacity 900ms var(--easeOut);
 	}
 
-	.page--loaded #siteLoader {
+	.page--loaded #appLoader {
 		opacity: 0;
 		pointer-events: none;
 	}
@@ -22,7 +22,7 @@
 {/* Component SCRIPTS */}
 <script>
 	function exitLoader() {
-		const loaderElement = document.querySelector("#siteLoader");
+		const loaderElement = document.querySelector("#appLoader");
 
 		if (loaderElement) {
 			const bodyElement = document.querySelector(`body`);
