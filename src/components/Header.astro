@@ -1,6 +1,12 @@
-<header><h1>header</h1></header>
+---
+import Navigation from "./Navigation.astro";
+---
 
-<style lang="scss">
+<header>
+	<Navigation />
+</header>
+
+<style>
 	header {
 		position: fixed;
 		z-index: var(--layer--above);
@@ -9,9 +15,11 @@
 
 		background-color: rgb(0 0 0 / 60%);
 		backdrop-filter: blur(18px) saturate(150%);
-		// box-shadow: 0 0 40px rgb(0 0 0 / 5%);
+		/* box-shadow: 0 0 40px rgb(0 0 0 / 5%); */
 
-		// will-change: transform;
-		// transition: transform 500ms var(--easeOut), opacity 500ms var(--easeOut);
+		/* will-change: transform;
+		transition:
+			transform 500ms var(--easeOut),
+			opacity 500ms var(--easeOut); */
 	}
 </style>
