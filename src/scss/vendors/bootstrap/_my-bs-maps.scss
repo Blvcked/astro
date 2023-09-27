@@ -1,10 +1,9 @@
 $spacers: (
-	0: 0,
+	0: $spacer * 0,
 	4: $spacer * 0.25,
 	8: $spacer * 0.5,
-	10: $spacer * 0.625,
 	12: $spacer * 0.75,
-	16: $spacer,
+	16: $spacer * 1,
 	20: $spacer * 1.25,
 	24: $spacer * 1.5,
 	30: $spacer * 1.875,
@@ -20,8 +19,10 @@ $spacers: (
 	160: $spacer * 10,
 	180: $spacer * 11.25,
 	200: $spacer * 12.5,
-	250: $spacer * 15.625,
-	270: $spacer * 16.875,
+	220: $spacer * 13.75,
+	240: $spacer * 15,
+	260: $spacer * 16.25,
+	280: $spacer * 17.5,
 	300: $spacer * 18.75,
 );
 $enable-negative-margins: true;
@@ -33,20 +34,3 @@ $position-values: (
 	75: 75%,
 	100: 100%,
 );
-
-$container-max-widths: (
-	sm: 540px,
-	md: 720px,
-	lg: 960px,
-	xl: 1140px,
-);
-
-$theme-colors: map-remove(
-	$theme-colors,
-	"success",
-	"info",
-	"warning",
-	"danger"
-);
-$colors: ();
-$grays: ();
