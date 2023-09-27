@@ -6,8 +6,6 @@ const { slug } = Astro.params;
 let res = await fetch(`https://itsmil.es/wp-json/wp/v2/posts?slug=${slug}`);
 let [post] = await res.json();
 
-// The getStaticPaths() is required for static Astro sites.
-// If using SSR, you will not need this function.
 export async function getStaticPaths() {
 	let data = await fetch("https://itsmil.es/wp-json/wp/v2/posts");
 	let posts = await data.json();

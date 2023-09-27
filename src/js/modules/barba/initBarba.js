@@ -24,22 +24,11 @@ export default function initBarba() {
 
 		transitions: [
 			{
-				// once({ next }) {
-				// 	animationFadeIn(next.container);
-				// },
 				leave: ({ current }) => fadeOut(current.container),
 				enter({ next }) {
 					fadeIn(next.container);
 				},
 			},
-			// Slide In from Left and Slide Out to Right transition
-			// {
-			// 	name: "slide-transition",
-			// 	leave: ({ current }) => slideOutToRight(current.container),
-			// 	enter({ next }) {
-			// 		slideInFromLeft(next.container);
-			// 	},
-			// },
 		],
 	});
 }

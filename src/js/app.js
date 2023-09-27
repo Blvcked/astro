@@ -15,14 +15,14 @@ import initBarba from "./modules/barba/initBarba";
 // GSAP
 import initGsap from "./modules/gsap/initGsap";
 import {
-	killTriggers,
+	// killTriggers,
 	updateTriggers,
 	updateEffects,
 	scrollTo,
 } from "./modules/gsap/gsapUtils";
 
 // UTILS
-import FPSMeter from "./modules/fpsMeter.js";
+// import FPSMeter from "./modules/fpsMeter.js";
 
 // ======================
 // EVENT LISTENERS
@@ -44,9 +44,9 @@ document.addEventListener(`DOMContentLoaded`, documentReady, false);
 // BARBA HOOKS
 // ======================
 
-barba.hooks.afterLeave(() => {
-	killTriggers();
-});
+// barba.hooks.afterLeave(() => {
+// 	killTriggers();
+// });
 
 barba.hooks.after(() => {
 	updateEffects();
