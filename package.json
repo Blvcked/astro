@@ -19,6 +19,7 @@
 		"@barba/core": "^2.9.7",
 		"@barba/prefetch": "^2.1.10",
 		"astro": "^3.1.4",
+		"bootstrap": "^5.3.2",
 		"gsap": "npm:@gsap/shockingly@^3.12.2"
 	},
 	"devDependencies": {
