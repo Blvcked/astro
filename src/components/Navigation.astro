@@ -1,6 +1,21 @@
+---
+let res = await fetch("https://itsmil.es/wp-json/wp/v2/posts");
+let posts = await res.json();
+---
+
 <ul>
 	<li><a href="/">Home</a></li>
 	<li><a href="/test/">Test</a></li>
+	{
+		posts.map((post) => (
+			<li>
+				<a
+					href={`/blog/${post.slug}`}
+					set:html={post.title.rendered}
+				/>
+			</li>
+		))
+	}
 </ul>
 
 <style>
