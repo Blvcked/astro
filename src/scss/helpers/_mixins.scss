@@ -1,0 +1,15 @@
+@mixin filter-blend($blend-mode: exclusion, $invert-percentage: false) {
+	mix-blend-mode: $blend-mode;
+	@if $invert-percentage {
+		filter: invert($invert-percentage);
+	}
+}
+.filter--exclusion {
+	@include filter-blend(exclusion);
+}
+.filter--overlay {
+	@include filter-blend(overlay);
+}
+.filter--plus-lighter--invert-half {
+	@include filter-blend(plus-lighter, 50%);
+}
